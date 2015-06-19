@@ -3,7 +3,7 @@ var url = "//www.youtube.com/embed/";
 function showResponse(response) {
    
     var i;
-    for (i=1; i <= 10; i++)
+    for (i=1; i <= 12; i++)
     {
         $('<iframe />');
         $('<iframe />', {
@@ -12,7 +12,7 @@ function showResponse(response) {
             width: 373, 
             height: 250,
             src: url + JSON.parse(JSON.stringify(response.items[i].id.videoId))
-        }).appendTo('#vids');
+        }).appendTo('#videos');
     }
 }
 
@@ -21,8 +21,8 @@ function onClientLoad() {
 }
 
 function onYouTubeApiLoad() {
-    gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
-    search("Shark Tank");
+    gapi.client.setApiKey('AIzaSyCS-MPGT_gh2_JJ3UjEGbPAJebEUmIwKv0');
+    search("Goal Setting");
 }
 
 function search(tags) {
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     $('.youtube-search').submit( function(event){
         var tags = $(this).find("input[name='search']").val();
-        $('#vids').empty();
+        $('#videos').empty();
         search(tags);
     });
 });
