@@ -9,8 +9,8 @@ function showResponse(response) {
         $('<iframe />', {
             name: 'frame'+i,
             id: 'frame'+i,
-            width: 560,
-            height: 315,
+            width: 373, 
+            height: 250,
             src: url + JSON.parse(JSON.stringify(response.items[i].id.videoId))
         }).appendTo('#vids');
     }
