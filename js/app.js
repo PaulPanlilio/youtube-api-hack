@@ -22,7 +22,7 @@ function onClientLoad() {
 
 function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
-    search("The Weaboos");
+    search("Shark Tank");
 }
 
 function search(tags) {
